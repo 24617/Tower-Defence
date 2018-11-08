@@ -45,13 +45,12 @@ public class EnemyMovement : MonoBehaviour {
         {
             waypointIndex += 1;
         }
-        
-        Vector2 LookAtPosition = (fullwaypoint[waypointIndex] =- transform.position).normalized;
-        float angle = Mathf.Atan2(LookAtPosition.y, LookAtPosition.x) * Mathf.Rad2Deg;
-        Quaternion rotation = new Quaternion();
-        rotation.eulerAngles = new Vector3(0, 0, angle + 90);
-        transform.rotation = rotation;
-        
+
+        Vector3 vectorToTarget = (Vector3)fullwaypoint[waypointIndex] - transform.position;
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+        Quaternion q = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 360);
+
     }
 
     void TowerReach()
