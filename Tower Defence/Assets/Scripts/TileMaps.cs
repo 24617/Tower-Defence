@@ -7,22 +7,23 @@ public class TileMaps : MonoBehaviour {
     /*
       Path = 0;
       Grass = 1;
+      greymenu = 2;
       Wood = 3;
       Water = 4;
       Castle = 5;
 
         gebruik tiles voor de grid roep het aan en dan moet je ze plaatsen met een switch
         de castle is dan op 1 terug dus dan moet je de castle verplaatsen als hij word aangeroepen
-        
+
+    
     */
 
     public Transform[] AllWaypoints;
-    public GameObject EnemySpawn;
     float GN = 0.16f;
 
 
 
-    int[,] myGrid = 
+    int[ , ] myGrid = 
          {
            {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
            {2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
@@ -107,7 +108,8 @@ void Start()
         GameObject IceTower = GameObject.Instantiate(Resources.Load<GameObject>("Ice Tower"), new Vector3((GN * 5), (GN * 1), -0.1f), Quaternion.identity) as GameObject;
         GameObject BombTower = GameObject.Instantiate(Resources.Load<GameObject>("Bomb Tower"), new Vector3((GN * 7), (GN * 1), -0.1f), Quaternion.identity) as GameObject;
 
-        EnemySpawn.transform.position = new Vector3((GN * 4), (GN * 18), -0.1f);
+
+        GameObject Enemyspawn = GameObject.Instantiate(Resources.Load<GameObject>("SpawnCave"), new Vector3((GN * 4), (GN * 18), -0.1f), Quaternion.identity) as GameObject;
 
     }
 
