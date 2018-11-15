@@ -36,6 +36,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4729350034407054}
   - component: {fileID: 212535164601720520}
+  - component: {fileID: 114087513687003884}
+  - component: {fileID: 114636051199896006}
+  - component: {fileID: 58727837734314676}
   m_Layer: 0
   m_Name: Bomb Tower
   m_TagString: Untagged
@@ -63,13 +66,57 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1394825289659016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.52, y: 1.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.4349985, y: 12.2278185, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 4643546616621932}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58727837734314676
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394825289659016}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.398
+--- !u!114 &114087513687003884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394825289659016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aac0224911938448ad9a6c0b7beddf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannon: {fileID: 1132100778744320}
+  getEnemyVector: {x: 0, y: 0, z: 0}
+  foundEnemy: 0
+--- !u!114 &114636051199896006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394825289659016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051b5de580bb22b458439e8e4c403c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1109535718000400, guid: bf419fcb182426a438c7ed08acda118a, type: 2}
+  closestEnemy: {fileID: 0}
+  bulletDamage: 0
+  canShoot: 0
 --- !u!212 &212535164601720520
 SpriteRenderer:
   m_ObjectHideFlags: 1

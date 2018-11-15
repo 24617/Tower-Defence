@@ -10,7 +10,6 @@ public class EnemyHealthBar : MonoBehaviour {
     public Image healthBar;
 
 	void Start () {
-        fullHealthBar = EnemyMain.enemyHealthbar;
         EnemyHealth = fullHealthBar;
 
         

@@ -4,16 +4,19 @@ using UnityEngine;
 using System.Linq;
 
 public class EnemyMovement : MonoBehaviour {
-
+    //VRAAG BEREND WAT ER MIS IS HIERMEE WWAAROM JE DIE ERROR KIRJGT EN HOE JE HET KAN OPLOSSEN
     WayPoints wayPoints;
 
     List<Vector2> fullwaypoint;
 
-    float enemyMoveSpeed = 0.2f;
+    public GameObject myCastle;
+    public float enemyMoveSpeed = 2f;
     int waypointIndex = 0;
     int currentWaypoint;
+    int fullwayPoints = 7;
 
     void Start () {
+        myCastle = GameObject.Find("Castle");
         currentWaypoint = Random.Range(1, 3);
         wayPoints = GameObject.Find("WayPoints").GetComponent<WayPoints>();
 
@@ -32,33 +35,33 @@ public class EnemyMovement : MonoBehaviour {
     }
 	
 	void Update () {
-       Move();
-       TowerReach();
+
+        if (waypointIndex == fullwayPoints)
+        {
+            myCastle.GetComponent<CastleHealthBar>().castleHealth -= 10;
+            Destroy(this.gameObject);
+        }
+
+        Move();
     }
 
     void Move()
     {
-        transform.position = Vector3.MoveTowards(transform.position, fullwaypoint[waypointIndex], enemyMoveSpeed * Time.deltaTime);
-        
-        if (transform.position.x == fullwaypoint[waypointIndex].x
-            && transform.position.y == fullwaypoint[waypointIndex].y)
+        if (waypointIndex != fullwayPoints)
         {
-            waypointIndex += 1;
+            transform.position = Vector3.MoveTowards(transform.position, fullwaypoint[waypointIndex], enemyMoveSpeed * Time.deltaTime);
+
+            if (transform.position.x == fullwaypoint[waypointIndex].x
+                && transform.position.y == fullwaypoint[waypointIndex].y)
+            {
+                waypointIndex += 1;
+            }
+
+            Vector3 vectorToTarget = (Vector3)fullwaypoint[waypointIndex] - transform.position;
+            float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+            Quaternion q = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 360);
         }
-
-        Vector3 vectorToTarget = (Vector3)fullwaypoint[waypointIndex] - transform.position;
-        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
-        Quaternion q = Quaternion.AngleAxis(angle + 90, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 360);
-
     }
 
-    void TowerReach()
-    {
-        if (waypointIndex == fullwaypoint.Count)
-        {
-            Destroy(this.gameObject);
-        }
-
-    }
 }

@@ -22,10 +22,11 @@ GameObject:
   - component: {fileID: 212334464089767086}
   - component: {fileID: 114955479100497384}
   - component: {fileID: 114631281559319474}
-  - component: {fileID: 114324105377396156}
+  - component: {fileID: 61696655350418198}
+  - component: {fileID: 50187480973722128}
   m_Layer: 11
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +41,7 @@ GameObject:
   - component: {fileID: 224494367551833854}
   - component: {fileID: 222335323162256354}
   - component: {fileID: 114124462655003456}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: HealthBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +59,7 @@ GameObject:
   - component: {fileID: 223673615050898354}
   - component: {fileID: 114229239644822180}
   - component: {fileID: 114331588333608994}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +76,7 @@ GameObject:
   - component: {fileID: 224246129738787442}
   - component: {fileID: 222116319172850598}
   - component: {fileID: 114388091700943634}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,13 +90,58 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1108474716540540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 1}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalPosition: {x: 20.336798, y: 10.235994, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_Children:
   - {fileID: 224419072513696442}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50187480973722128
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1108474716540540}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61696655350418198
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1108474716540540}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!114 &114124462655003456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.272}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -144,17 +190,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114324105377396156
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1108474716540540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffbed569111ea924fb48a48a71f62e1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114331588333608994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.809, g: 0.07239401, b: 0.07239401, a: 1}
+  m_Color: {r: 0.21643229, g: 0.023842994, b: 0.3602941, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -209,8 +244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3975ac9ba835d7942b1eda84310f26e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullHealthBar: 0
-  EnemyHealth: 0
+  fullHealthBar: 25
+  EnemyHealth: 25
   healthBar: {fileID: 114388091700943634}
 --- !u!114 &114955479100497384
 MonoBehaviour:
@@ -223,6 +258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681da4eecaec81c4aa3889bd866a3258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myCastle: {fileID: 0}
+  enemyMoveSpeed: 2
 --- !u!212 &212334464089767086
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -257,7 +294,7 @@ SpriteRenderer:
   m_SortingLayerID: -1430610643
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4bcf2730835b8824c87526c9be9d1dab, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -265,7 +302,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!222 &222116319172850598
 CanvasRenderer:

@@ -36,6 +36,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4556944663060444}
   - component: {fileID: 212957193377204092}
+  - component: {fileID: 114162474456509552}
+  - component: {fileID: 114124971088046696}
+  - component: {fileID: 58055818476834842}
   m_Layer: 0
   m_Name: Ice Tower
   m_TagString: Untagged
@@ -64,12 +67,56 @@ Transform:
   m_GameObject: {fileID: 1963429923075244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.36, y: 1.68, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 4322938656099260}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58055818476834842
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963429923075244}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.398
+--- !u!114 &114124971088046696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963429923075244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051b5de580bb22b458439e8e4c403c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1673949921486780, guid: 39ec51e2c9dc1d9459e45cd9301784bb, type: 2}
+  closestEnemy: {fileID: 0}
+  bulletDamage: 0
+  canShoot: 0
+--- !u!114 &114162474456509552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1963429923075244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aac0224911938448ad9a6c0b7beddf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannon: {fileID: 1762237084479806}
+  getEnemyVector: {x: 0, y: 0, z: 0}
+  foundEnemy: 0
 --- !u!212 &212914426994217752
 SpriteRenderer:
   m_ObjectHideFlags: 1

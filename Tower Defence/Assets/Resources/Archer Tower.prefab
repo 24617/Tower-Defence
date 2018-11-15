@@ -9,36 +9,36 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1369535970856606}
+  m_RootGameObject: {fileID: 1511002606856260}
   m_IsPrefabParent: 1
---- !u!1 &1277354370942812
+--- !u!1 &1363320033929318
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4935073159055742}
-  - component: {fileID: 212993479829362880}
-  - component: {fileID: 58263209550164612}
+  - component: {fileID: 4363485788630208}
+  - component: {fileID: 212247101908947130}
   m_Layer: 11
-  m_Name: Archer Weapon
+  m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1369535970856606
+--- !u!1 &1511002606856260
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4299944231338798}
-  - component: {fileID: 212391472311585948}
-  - component: {fileID: 114669200302447884}
-  - component: {fileID: 114152198435497040}
+  - component: {fileID: 4909164463343568}
+  - component: {fileID: 212557359492275864}
+  - component: {fileID: 114184910581306514}
+  - component: {fileID: 114835498816825998}
+  - component: {fileID: 58584683065169304}
   m_Layer: 11
   m_Name: Archer Tower
   m_TagString: Untagged
@@ -46,76 +46,83 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4299944231338798
+--- !u!4 &4363485788630208
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1369535970856606}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.381, y: 1.06, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4935073159055742}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4935073159055742
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1277354370942812}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1363320033929318}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4299944231338798}
+  m_Father: {fileID: 4909164463343568}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+--- !u!4 &4909164463343568
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1511002606856260}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.32, y: 0.8, z: -0.1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_Children:
+  - {fileID: 4363485788630208}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58263209550164612
+--- !u!58 &58584683065169304
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1277354370942812}
+  m_GameObject: {fileID: 1511002606856260}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.32
---- !u!114 &114152198435497040
+  m_Radius: 0.398
+--- !u!114 &114184910581306514
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1369535970856606}
+  m_GameObject: {fileID: 1511002606856260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4be632bea03e4f141845aa90629d3b48, type: 3}
+  m_Script: {fileID: 11500000, guid: 4aac0224911938448ad9a6c0b7beddf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114669200302447884
+  cannon: {fileID: 1363320033929318}
+  getEnemyVector: {x: 0, y: 0, z: 0}
+  foundEnemy: 0
+--- !u!114 &114835498816825998
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1369535970856606}
+  m_GameObject: {fileID: 1511002606856260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad690a1eaa6ddb04daa848abeb961f39, type: 3}
+  m_Script: {fileID: 11500000, guid: 051b5de580bb22b458439e8e4c403c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &212391472311585948
+  projectile: {fileID: 1540279996623490, guid: d4ff00f9adef4ef4abc47fd31024a7df, type: 2}
+  closestEnemy: {fileID: 0}
+  bulletDamage: 0
+  canShoot: 0
+--- !u!212 &212247101908947130
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1369535970856606}
+  m_GameObject: {fileID: 1363320033929318}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -141,10 +148,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1430610643
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: db7bb1ad904e5e547a973acd92ac250e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c39d1f005b39f0459126f72be1e0657, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,12 +161,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!212 &212993479829362880
+--- !u!212 &212557359492275864
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1277354370942812}
+  m_GameObject: {fileID: 1511002606856260}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -185,10 +192,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1430610643
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c39d1f005b39f0459126f72be1e0657, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db7bb1ad904e5e547a973acd92ac250e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

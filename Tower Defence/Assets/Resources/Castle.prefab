@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4047262651890374}
   - component: {fileID: 212095665079072804}
-  m_Layer: 0
+  - component: {fileID: 114616001247190846}
+  m_Layer: 8
   m_Name: Castle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,12 +35,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697252765177162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114616001247190846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697252765177162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a0aa0d1261d4f4a8d396806984f4bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullHealthBar: 100
+  castleHealth: 80
+  castlehealthBar: {fileID: 0}
 --- !u!212 &212095665079072804
 SpriteRenderer:
   m_ObjectHideFlags: 1
