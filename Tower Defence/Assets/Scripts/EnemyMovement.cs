@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Linq;
 
 public class EnemyMovement : MonoBehaviour {
-    //VRAAG BEREND WAT ER MIS IS HIERMEE WWAAROM JE DIE ERROR KIRJGT EN HOE JE HET KAN OPLOSSEN
     WayPoints wayPoints;
 
     List<Vector2> fullwaypoint;

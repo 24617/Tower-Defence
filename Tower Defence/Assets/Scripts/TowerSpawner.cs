@@ -8,16 +8,8 @@ public class TowerSpawner : MonoBehaviour
     GameObject towerHold;
     float snapvalue = 1.6f;
 
-
-
-    void Start()
-    {
-    }
-
-
     void Update()
     {
-
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
         RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
@@ -91,8 +83,6 @@ public class TowerSpawner : MonoBehaviour
 
         if (canMakeTurret == false)
         {
-
-             //towerHold.transform.position = new Vector3(Mathf.Round(worldPos.x), Mathf.Round(worldPos.y), worldPos.z);
             towerHold.transform.parent = GameObject.Find("Grid").transform;
             towerHold.transform.position = new Vector3(snapvalue * Mathf.Round(mousePos.x / snapvalue), snapvalue * Mathf.Round(mousePos.y / snapvalue), -0.3f);
         }

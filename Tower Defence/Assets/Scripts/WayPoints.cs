@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class WayPoints : MonoBehaviour {
 
-    float GN = 1.6f;
+    float groundNumber = 1.6f;
     public List<Vector2> waypointsUP = new List<Vector2>();
     public List<Vector2> waypointsDown = new List<Vector2>();
 
     public void Awake()
     {
         
-        waypointsUP.Add(new Vector2((GN * 4), (GN * 17)));
-        waypointsUP.Add(new Vector2((GN * 4), (GN * 8)));
-        waypointsUP.Add(new Vector2((GN * 8), (GN * 8)));
-        waypointsUP.Add(new Vector2((GN * 8), (GN * 14)));
-        waypointsUP.Add(new Vector2((GN * 14), (GN * 14)));
-        waypointsUP.Add(new Vector2((GN * 14), (GN * 7)));
-        waypointsUP.Add(new Vector2((GN * 18), (GN * 7)));
-        waypointsUP.Add(new Vector2((GN * 18), (GN * 7)));
+        waypointsUP.Add(new Vector2((groundNumber * 4), (groundNumber * 17)));
+        waypointsUP.Add(new Vector2((groundNumber * 4), (groundNumber * 8)));
+        waypointsUP.Add(new Vector2((groundNumber * 8), (groundNumber * 8)));
+        waypointsUP.Add(new Vector2((groundNumber * 8), (groundNumber * 14)));
+        waypointsUP.Add(new Vector2((groundNumber * 14), (groundNumber * 14)));
+        waypointsUP.Add(new Vector2((groundNumber * 14), (groundNumber * 7)));
+        waypointsUP.Add(new Vector2((groundNumber * 18), (groundNumber * 7)));
+        waypointsUP.Add(new Vector2((groundNumber * 18), (groundNumber * 7)));
 
 
-        waypointsDown.Add(new Vector2((GN * 4), (GN * 17)));
-        waypointsDown.Add(new Vector2((GN * 4), (GN * 8)));
-        waypointsDown.Add(new Vector2((GN * 6), (GN * 8)));
-        waypointsDown.Add(new Vector2((GN * 6), (GN * 5)));
-        waypointsDown.Add(new Vector2((GN * 15), (GN * 5)));
-        waypointsDown.Add(new Vector2((GN * 15), (GN * 7)));
-        waypointsDown.Add(new Vector2((GN * 18), (GN * 7)));
-        waypointsDown.Add(new Vector2((GN * 18), (GN * 7)));
+        waypointsDown.Add(new Vector2((groundNumber * 4), (groundNumber * 17)));
+        waypointsDown.Add(new Vector2((groundNumber * 4), (groundNumber * 8)));
+        waypointsDown.Add(new Vector2((groundNumber * 6), (groundNumber * 8)));
+        waypointsDown.Add(new Vector2((groundNumber * 6), (groundNumber * 5)));
+        waypointsDown.Add(new Vector2((groundNumber * 15), (groundNumber * 5)));
+        waypointsDown.Add(new Vector2((groundNumber * 15), (groundNumber * 7)));
+        waypointsDown.Add(new Vector2((groundNumber * 18), (groundNumber * 7)));
+        waypointsDown.Add(new Vector2((groundNumber * 18), (groundNumber * 7)));
 
 
 
